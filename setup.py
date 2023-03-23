@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-        	'talker = detecion_node.webcam:main'
+        	'talker = detection_node.webcam:main'
         ],
     },
 )
