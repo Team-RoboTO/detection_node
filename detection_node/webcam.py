@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import time
 import rclpy
 from rclpy.node import Node
 import cv2
@@ -34,6 +35,8 @@ class ImagePublisher(Node):
                 frame_mono = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
                 self.mono8pub.publish(self.bridge.cv2_to_imgmsg(frame_mono, "mono8"))
 
+                print("Publishing every 2 seconds")
+                time.sleep(2)
             except CvBridgeError as e:
                 print(e)
         self.cap.release()
