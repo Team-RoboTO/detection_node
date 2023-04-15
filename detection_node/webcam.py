@@ -10,10 +10,10 @@ class ImagePublisher(Node):
     def __init__(self):
         super().__init__("image_publisher")
         self.bridge = CvBridge()
-        self.pub = self.create_publisher(Image, "/image", 10)
-        self.rgb8pub = self.create_publisher(Image, "/image/rgb", 10)
-        self.bgr8pub = self.create_publisher(Image, "/image/bgr", 10)
-        self.mono8pub = self.create_publisher(Image, "/image/mono", 10)
+        self.pub = self.create_publisher(Image, "/image",1)
+        self.rgb8pub = self.create_publisher(Image, "/image/rgb", 1)
+        self.bgr8pub = self.create_publisher(Image, "/image/bgr", 1)
+        self.mono8pub = self.create_publisher(Image, "/image/mono", 1)
         self.cap = cv2.VideoCapture(0)
 
     def run(self):
@@ -36,7 +36,7 @@ class ImagePublisher(Node):
                 self.mono8pub.publish(self.bridge.cv2_to_imgmsg(frame_mono, "mono8"))
 
                 print("Publishing every 2 seconds")
-                time.sleep(2)
+                time.sleep(0.1)
             except CvBridgeError as e:
                 print(e)
         self.cap.release()
