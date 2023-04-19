@@ -1,7 +1,7 @@
 from setuptools import setup
 
 package_name = 'detection_node'
-
+submodules = 'detection_node/utils.py'
 setup(
     name=package_name,
     version='0.0.0',
@@ -21,7 +21,10 @@ setup(
     entry_points={
         'console_scripts': [
         	'talker = detection_node.webcam:main',
-        	'listener = detection_node.detector:main'
+        	'detector = detection_node.detector:main',
+            'v = detection_node.cv_view:main',
+            'point_cloud_printer = detection_node.point_cloud_extractor:main',
+            
         ],
     },
 )

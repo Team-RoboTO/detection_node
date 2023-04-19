@@ -39,6 +39,7 @@ class ImagePublisher(Node):
                 time.sleep(0.1)
             except CvBridgeError as e:
                 print(e)
+            
         self.cap.release()
 
 def main(args=None):
