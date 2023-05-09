@@ -25,6 +25,7 @@ setup(
             'v = detection_node.cv_view:main',
             'point_cloud_printer = detection_node.point_cloud_extractor:main',
             'pose_extractor = detection_node.pose_extractor:main',
+            'serial = detection_node.serial_port:main'
             
         ],
     },

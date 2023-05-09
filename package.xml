@@ -17,6 +17,11 @@
   <exec_depend>torch</exec_depend>
   <exec_depend>numpy</exec_depend>
   <exec_depend>threading</exec_depend>
+  <exec_depend>pickletools</exec_depend>
+  <exec_depend>serial</exec_depend>
+  <exec_depend>matplotlib<exec_depend>
+  <exec_depend>serial_class</exec_depend>
+  <exec_depend>struct</exec_depend>
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>

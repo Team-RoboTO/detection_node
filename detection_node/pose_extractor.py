@@ -6,7 +6,7 @@ import numpy as np
 import cv2
 from std_msgs.msg import Float32MultiArray, MultiArrayDimension
 import struct
-
+import matplotlib.pyplot as plt
 import threading
 
 class PixelPosition(Node):
@@ -23,6 +23,12 @@ class PixelPosition(Node):
         self.bridge = CvBridge()
         self.pointcloud = None
         self.bboxs = None
+        self.figx, self.ax = plt.subplots()
+        self.figy, self.ay = plt.subplots()
+        self.figz, self.az = plt.subplots()
+        self.x = []
+        self.y = []
+        self.z = []
 
     def pointcloud_callback(self, msg):
         # Salva la point cloud come un oggetto numpy
@@ -52,8 +58,21 @@ class PixelPosition(Node):
                 xc = (x2 + x1) // 2
                 yc = (y2 + y1) // 2
                 xyz = self.get_pointcloud_xyz(xc,yc)
-                print(xyz)
+                # self.x.append(xyz[0])
+                # self.y.append(xyz[1])
+                # self.z.append(xyz[2])
+                # print(xyz)
                 self.publish_numpy_array(xyz, delay)
+                # self.ax.clear()
+                # self.ax.plot(self.x)
+                # self.ay.clear()
+                # self.ay.plot(self.y)
+                # self.az.clear()
+                # self.az.plot(self.z)
+                # self.figx.canvas.draw()
+                # self.figy.canvas.draw()
+                # self.figz.canvas.draw()
+                # plt.pause(0.0001)
             elif msg.layout.dim[0] == 'empty':
                 self.bboxs = None
     

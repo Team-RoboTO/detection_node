@@ -1,12 +1,8 @@
 from pickletools import uint8
-from rclpy.node import Node
 from serial.tools.list_ports import comports
 import struct
 import serial
 import numpy as np
-import rclpy
-
-from std_msgs.msg import Float32MultiArray, MultiArrayDimension
 
 class Ser:
     def __init__(self):
@@ -14,7 +10,7 @@ class Ser:
         port = comports()
         name = port[0].device
         print("Connection to:", name)
-        self.ser= serial.Serial(name,230400, timeout=0.0001)
+        self.ser= serial.Serial(name,115200, timeout=0.001)
         print("done\n")
         
     def start_comunication_and_get_color(self):
@@ -60,38 +56,3 @@ class Ser:
 
     def is_Open(self):
         return self.ser.isOpen()
-
-
-
-
-
-
-class SerialNode(Node):
-    def __init__(self):
-        super().__init__('serial_node')
-        self.subscription = self.create_subscription(
-            Float32MultiArray,
-            '/yolo/enemy_pose',
-            self.listener_callback,
-            5
-        )
-        self.serial = Ser()
-
-    def listener_callback(self, msg):
-        position = np.array(msg.data, dtype=np.float32)
-        print("sono nella callback")
-        if np.all(position != 0):
-            print("sto inviado")
-            self.serial.send_everything(position[:3],1)
-
-
-
-def main(args=None):
-    rclpy.init(args=args)
-    node = SerialNode()
-    rclpy.spin(node)
-    rclpy.shutdown()
-
-
-if __name__ == '__main__':
-    main()
