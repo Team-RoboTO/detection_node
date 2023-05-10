@@ -61,11 +61,6 @@ class Ser:
     def is_Open(self):
         return self.ser.isOpen()
 
-
-
-
-
-
 class SerialNode(Node):
     def __init__(self):
         super().__init__('serial_node')
@@ -84,14 +79,11 @@ class SerialNode(Node):
             print("sto inviado")
             self.serial.send_everything(position[:3],1)
 
-
-
 def main(args=None):
     rclpy.init(args=args)
     node = SerialNode()
     rclpy.spin(node)
     rclpy.shutdown()
-
 
 if __name__ == '__main__':
     main()

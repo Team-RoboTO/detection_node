@@ -1,7 +1,7 @@
 from setuptools import setup
 
 package_name = 'detection_node'
-submodules = 'detection_node/utils.py'
+
 setup(
     name=package_name,
     version='0.0.0',
@@ -14,7 +14,7 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='auto',
-    maintainer_email='auto@todo.todo',
+    maintainer_email='roboto.polito@gmail.com',
     description='TODO: Package description',
     license='TODO: License declaration',
     tests_require=['pytest'],
@@ -26,7 +26,6 @@ setup(
             'point_cloud_printer = detection_node.point_cloud_extractor:main',
             'pose_extractor = detection_node.pose_extractor:main',
             'serial = detection_node.serial_port:main'
-            
         ],
     },
 )
