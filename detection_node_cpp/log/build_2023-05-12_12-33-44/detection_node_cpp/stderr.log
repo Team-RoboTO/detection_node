@@ -1,0 +1,4 @@
+CMake Error at CMakeLists.txt:29 (install):
+  install TARGETS given target "detection_node_cpp" which does not exist.
+
+

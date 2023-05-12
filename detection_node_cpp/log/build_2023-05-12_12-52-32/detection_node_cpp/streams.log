@@ -1,0 +1,27 @@
+[0.097s] Invoking command in '/home/auto/detection_node_cpp/build/detection_node_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/auto/ros2_ws/install/position_detection:/home/auto/ros2_ws/install/detection_node /usr/bin/cmake --build /home/auto/detection_node_cpp/build/detection_node_cpp -- -j8 -l8
+[0.301s] [35m[1mScanning dependencies of target detection_node_cpp[0m
+[0.550s] [ 50%] [32mBuilding CXX object CMakeFiles/detection_node_cpp.dir/src/detection_node_cpp.cpp.o[0m
+[39.033s] [100%] [32m[1mLinking CXX executable detection_node_cpp[0m
+[42.073s] /usr/bin/ld: warning: libopencv_imgproc.so.4.2, needed by /opt/ros/foxy/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.4.5
+[42.126s] [100%] Built target detection_node_cpp
+[42.177s] Invoked command in '/home/auto/detection_node_cpp/build/detection_node_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/auto/ros2_ws/install/position_detection:/home/auto/ros2_ws/install/detection_node /usr/bin/cmake --build /home/auto/detection_node_cpp/build/detection_node_cpp -- -j8 -l8
+[42.349s] Invoking command in '/home/auto/detection_node_cpp/build/detection_node_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/auto/ros2_ws/install/position_detection:/home/auto/ros2_ws/install/detection_node /usr/bin/cmake --install /home/auto/detection_node_cpp/build/detection_node_cpp
+[42.383s] -- Install configuration: ""
+[42.384s] -- Installing: /home/auto/detection_node_cpp/install/detection_node_cpp/lib/detection_node_cpp/detection_node_cpp
+[42.412s] -- Set runtime path of "/home/auto/detection_node_cpp/install/detection_node_cpp/lib/detection_node_cpp/detection_node_cpp" to ""
+[42.413s] -- Up-to-date: /home/auto/detection_node_cpp/install/detection_node_cpp/share/ament_index/resource_index/package_run_dependencies/detection_node_cpp
+[42.413s] -- Up-to-date: /home/auto/detection_node_cpp/install/detection_node_cpp/share/ament_index/resource_index/parent_prefix_path/detection_node_cpp
+[42.413s] -- Up-to-date: /home/auto/detection_node_cpp/install/detection_node_cpp/share/detection_node_cpp/environment/ament_prefix_path.sh
+[42.414s] -- Up-to-date: /home/auto/detection_node_cpp/install/detection_node_cpp/share/detection_node_cpp/environment/ament_prefix_path.dsv
+[42.414s] -- Up-to-date: /home/auto/detection_node_cpp/install/detection_node_cpp/share/detection_node_cpp/environment/path.sh
+[42.415s] -- Up-to-date: /home/auto/detection_node_cpp/install/detection_node_cpp/share/detection_node_cpp/environment/path.dsv
+[42.415s] -- Up-to-date: /home/auto/detection_node_cpp/install/detection_node_cpp/share/detection_node_cpp/local_setup.bash
+[42.415s] -- Up-to-date: /home/auto/detection_node_cpp/install/detection_node_cpp/share/detection_node_cpp/local_setup.sh
+[42.415s] -- Up-to-date: /home/auto/detection_node_cpp/install/detection_node_cpp/share/detection_node_cpp/local_setup.zsh
+[42.416s] -- Up-to-date: /home/auto/detection_node_cpp/install/detection_node_cpp/share/detection_node_cpp/local_setup.dsv
+[42.416s] -- Installing: /home/auto/detection_node_cpp/install/detection_node_cpp/share/detection_node_cpp/package.dsv
+[42.416s] -- Up-to-date: /home/auto/detection_node_cpp/install/detection_node_cpp/share/ament_index/resource_index/packages/detection_node_cpp
+[42.417s] -- Up-to-date: /home/auto/detection_node_cpp/install/detection_node_cpp/share/detection_node_cpp/cmake/detection_node_cppConfig.cmake
+[42.417s] -- Up-to-date: /home/auto/detection_node_cpp/install/detection_node_cpp/share/detection_node_cpp/cmake/detection_node_cppConfig-version.cmake
+[42.417s] -- Up-to-date: /home/auto/detection_node_cpp/install/detection_node_cpp/share/detection_node_cpp/package.xml
+[42.429s] Invoked command in '/home/auto/detection_node_cpp/build/detection_node_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/auto/ros2_ws/install/position_detection:/home/auto/ros2_ws/install/detection_node /usr/bin/cmake --install /home/auto/detection_node_cpp/build/detection_node_cpp

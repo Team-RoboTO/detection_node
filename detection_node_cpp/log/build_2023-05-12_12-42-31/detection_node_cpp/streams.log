@@ -1,0 +1,11 @@
+[0.100s] Invoking command in '/home/auto/detection_node_cpp/build/detection_node_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/auto/ros2_ws/install/position_detection:/home/auto/ros2_ws/install/detection_node /usr/bin/cmake --build /home/auto/detection_node_cpp/build/detection_node_cpp -- -j8 -l8
+[0.280s] [35m[1mScanning dependencies of target detection_node_cpp[0m
+[0.447s] [ 50%] [32mBuilding CXX object CMakeFiles/detection_node_cpp.dir/src/detection_node_cpp.cpp.o[0m
+[1.040s] [01m[K/home/auto/detection_node_cpp/src/detection_node_cpp.cpp:7:10:[m[K [01;31m[Kfatal error: [m[Kpcl/point_cloud.h: No such file or directory
+[1.040s]     7 | #include [01;31m[K<pcl/point_cloud.h>[m[K
+[1.041s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[1.041s] compilation terminated.
+[1.049s] make[2]: *** [CMakeFiles/detection_node_cpp.dir/build.make:63: CMakeFiles/detection_node_cpp.dir/src/detection_node_cpp.cpp.o] Error 1
+[1.049s] make[1]: *** [CMakeFiles/Makefile2:105: CMakeFiles/detection_node_cpp.dir/all] Error 2
+[1.050s] make: *** [Makefile:141: all] Error 2
+[1.061s] Invoked command in '/home/auto/detection_node_cpp/build/detection_node_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/auto/ros2_ws/install/position_detection:/home/auto/ros2_ws/install/detection_node /usr/bin/cmake --build /home/auto/detection_node_cpp/build/detection_node_cpp -- -j8 -l8

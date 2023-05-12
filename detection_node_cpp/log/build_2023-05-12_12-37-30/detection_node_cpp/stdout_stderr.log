@@ -1,0 +1,9 @@
+[35m[1mScanning dependencies of target detection_node_cpp[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/detection_node_cpp.dir/src/detection_node_cpp.cpp.o[0m
+[01m[K/home/auto/detection_node_cpp/src/detection_node_cpp.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Ksensor_msgs/PointCloud2.h: No such file or directory
+    2 | #include [01;31m[K<sensor_msgs/PointCloud2.h>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/detection_node_cpp.dir/build.make:63: CMakeFiles/detection_node_cpp.dir/src/detection_node_cpp.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:105: CMakeFiles/detection_node_cpp.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

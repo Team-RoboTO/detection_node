@@ -15,20 +15,34 @@ from threading import Thread, Lock
 
 class DetectorAndTracker(Node):
     def __init__(self):
-        super().__init__("image_subscriber")
+        super().__init__("DetectorAndTracker")
         self.bridge = CvBridge()
         self.rgb_subscriber = self.create_subscription(Image,
                                 "/zedm/zed_node/rgb/image_rect_color",
-                                self.run, 5)
+                                self.run, 10)
         self.publisher = self.create_publisher(Float32MultiArray, 'yolo/bboxs', 10)
           # This will automatically download the trained model
         self.frame = None
-        self.lock = Lock()
+        self.tt = -1
+        self.model = YOLO("/home/auto/Downloads/best_armor.engine", task='detect')
+        print("yolo is loaded...")
 
     def run(self, frame):
-        self.lock.acquire()
-        self.frame = self.bridge.imgmsg_to_cv2(frame, "bgr8")  # Convert the image to np.array
-        self.lock.release()
+        #self.lock.acquire()
+        self.frame = self.bridge.imgmsg_to_cv2(frame, "bgr8") 
+        prima = time.time() # Convert the image to np.array
+        results = self.model.track(self.frame,classes=0, device=0)  # Compute predictions
+        t = time.time()
+        print("detection time", prima-t)
+        if self.tt !=-1:
+            delay = t - self.tt
+        else:
+            delay = -1
+        self.tt = t
+        print("delay from previous spin", delay)
+        boxes = results[0].boxes.xyxy.cpu().numpy()
+        self.publish_numpy_array(boxes, delay)
+        #self.lock.release()
 
     def publish_numpy_array(self, numpy_array, delay):
         msg = Float32MultiArray()
@@ -48,51 +62,11 @@ class DetectorAndTracker(Node):
             msg.data = [0.0]
 
         self.publisher.publish(msg)
-    def get_frame(self):
-
-        return self.frame
     
-    def clear(self):
-        self.frame = None
-    def get_lock(self):
-        return self.lock
-    
-
-def yolo_func(node):
-    model = YOLO("yolov8n.engine", task='detect')
-    print("yolo is loaded...")
-    lock = node.get_lock()
-    tt = -1
-    while True:
-        lock.acquire()
-        frame = node.get_frame()
-        
-        prima = time.time()
-        results = model.track(frame,classes=0, tracker="bytetrack.yaml", device=0)  # Compute predictions
-        t = time.time()
-        lock.release()
-        
-        print("detection time", prima-t)
-        if tt !=-1:
-            delay = t - tt
-        else:
-            delay = -1
-        tt = t
-        print("delay from previous spin", delay)
-        #out = results[0].plot()  # This plots the prediction on the original image
-        # Publish after converting to ROS format
-        boxes = results[0].boxes.xyxy.cpu().numpy()
-        node.publish_numpy_array(boxes, delay)
-        #self.detector_publisher.publish(self.bridge.cv2_to_imgmsg(out, "rgb8"))
-
-
 def main(args=None):
     rclpy.init(args=args)
     print("start")
     detector= DetectorAndTracker()
-    yolo = Thread(target=yolo_func, kwargs={'node':detector})
-    print("launch...")
-    yolo.start()
     rclpy.spin(detector)
     detector.destroy_node()
     rclpy.shutdown()

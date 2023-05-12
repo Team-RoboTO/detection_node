@@ -1,0 +1,10 @@
+/home/auto/detection_node_cpp/build/detection_node_cpp/CMakeFiles/install/local.dir
+/home/auto/detection_node_cpp/build/detection_node_cpp/CMakeFiles/install.dir
+/home/auto/detection_node_cpp/build/detection_node_cpp/CMakeFiles/list_install_components.dir
+/home/auto/detection_node_cpp/build/detection_node_cpp/CMakeFiles/rebuild_cache.dir
+/home/auto/detection_node_cpp/build/detection_node_cpp/CMakeFiles/edit_cache.dir
+/home/auto/detection_node_cpp/build/detection_node_cpp/CMakeFiles/test.dir
+/home/auto/detection_node_cpp/build/detection_node_cpp/CMakeFiles/install/strip.dir
+/home/auto/detection_node_cpp/build/detection_node_cpp/CMakeFiles/detection_node_cpp_uninstall.dir
+/home/auto/detection_node_cpp/build/detection_node_cpp/CMakeFiles/detection_node_cpp.dir
+/home/auto/detection_node_cpp/build/detection_node_cpp/CMakeFiles/uninstall.dir

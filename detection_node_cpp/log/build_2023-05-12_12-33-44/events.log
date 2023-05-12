@@ -1,0 +1,75 @@
+[0.000000] (-) TimerEvent: {}
+[0.001155] (detection_node_cpp) JobQueued: {'identifier': 'detection_node_cpp', 'dependencies': OrderedDict()}
+[0.002085] (detection_node_cpp) JobStarted: {'identifier': 'detection_node_cpp'}
+[0.087460] (detection_node_cpp) JobProgress: {'identifier': 'detection_node_cpp', 'progress': 'cmake'}
+[0.091487] (detection_node_cpp) Command: {'cmd': ['/usr/bin/cmake', '/home/auto/detection_node_cpp', '-DCMAKE_INSTALL_PREFIX=/home/auto/detection_node_cpp/install/detection_node_cpp'], 'cwd': '/home/auto/detection_node_cpp/build/detection_node_cpp', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'auto'), ('SSH_AGENT_PID', '2558'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/rviz_ogre_vendor/lib/:/opt/ros/foxy/lib/aarch64-linux-gnu/:/home/auto/ros2_ws/install/zed_topic_benchmark_interfaces/lib:/home/auto/ros2_ws/install/zed_rgb_convert/lib:/home/auto/ros2_ws/install/zed_components/lib:/home/auto/ros2_ws/install/rviz_plugin_zed_od/lib:/home/auto/ros2_ws/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/auto'), ('OLDPWD', '/home/auto/detection_node_cpp/src'), ('DESKTOP_SESSION', 'ubuntu'), ('JETSON_L4T', '35.3.1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('JETSON_MODEL', 'Jetson-AGX'), ('MANAGERPID', '1998'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/home/auto/ros2_ws/'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/auto/ros2_ws/install:/opt/ros/foxy'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'auto'), ('JETSON_MODULE', 'NVIDIA Jetson AGX Xavier (16 GB ram)'), ('JETSON_SERIAL_NUMBER', '0420719082490'), ('JOURNAL_STREAM', '7:55624'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/foxy/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/foxy/lib/pkgconfig'), ('JETSON_CODENAME', 'Galen'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'auto'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/opt/rviz_ogre_vendor/lib/:/opt/ros/foxy/bin:/home/auto/.local/bin:/root/.local/bin:/usr/local/cuda-11.4/bin:/home/auto/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2604,unix/ubuntu:/tmp/.ICE-unix/2604'), ('INVOCATION_ID', '52c506a4d2f042bcafc0e4639fe6317b'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/47182418_d5db_4a54_a0ee_118ca508a99c'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra194'), ('GNOME_TERMINAL_SERVICE', ':1.79'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/auto/ros2_ws/install/zed_ros2:/home/auto/ros2_ws/install/zed_multi_camera:/home/auto/ros2_ws/install/zed_display_rviz2:/home/auto/ros2_ws/install/zed_wrapper:/home/auto/ros2_ws/install/zed_tutorial_video:/home/auto/ros2_ws/install/zed_tutorial_pos_tracking:/home/auto/ros2_ws/install/zed_tutorial_depth:/home/auto/ros2_ws/install/zed_topic_benchmark_interfaces:/home/auto/ros2_ws/install/zed_rgb_convert:/home/auto/ros2_ws/install/zed_components:/home/auto/ros2_ws/install/rviz_plugin_zed_od:/home/auto/ros2_ws/install/position_detection:/home/auto/ros2_ws/install/detection_node:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('JETSON_CUDA_ARCH_BIN', '7.2'), ('PWD', '/home/auto/detection_node_cpp/build/detection_node_cpp'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/auto/ros2_ws/install/zed_topic_benchmark_interfaces/lib/python3.8/site-packages:/home/auto/ros2_ws/install/zed_interfaces/lib/python3.8/site-packages:/home/auto/ros2_ws/build/position_detection:/home/auto/ros2_ws/install/position_detection/lib/python3.8/site-packages:/home/auto/ros2_ws/install/new_detector/lib/python3.8/site-packages:/home/auto/ros2_ws/install/detection_node/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('JETSON_JETPACK', '5.1.1'), ('CMAKE_PREFIX_PATH', '/home/auto/ros2_ws/install/zed_ros2:/home/auto/ros2_ws/install/zed_multi_camera:/home/auto/ros2_ws/install/zed_display_rviz2:/home/auto/ros2_ws/install/zed_wrapper:/home/auto/ros2_ws/install/zed_tutorial_video:/home/auto/ros2_ws/install/zed_tutorial_pos_tracking:/home/auto/ros2_ws/install/zed_tutorial_depth:/home/auto/ros2_ws/install/zed_topic_benchmark_interfaces:/home/auto/ros2_ws/install/zed_rgb_convert:/home/auto/ros2_ws/install/zed_components:/home/auto/ros2_ws/install/rviz_plugin_zed_od:/home/auto/ros2_ws/install/zed_interfaces:/opt/ros/foxy:/home/auto/ros2_ws/install/position_detection:/home/auto/ros2_ws/install/detection_node'), ('JETSON_P_NUMBER', 'p2888-0001')]), 'shell': False}
+[0.112414] (-) TimerEvent: {}
+[0.160290] (detection_node_cpp) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.212542] (-) TimerEvent: {}
+[0.252346] (detection_node_cpp) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.312737] (-) TimerEvent: {}
+[0.413610] (-) TimerEvent: {}
+[0.514348] (-) TimerEvent: {}
+[0.615222] (-) TimerEvent: {}
+[0.716003] (-) TimerEvent: {}
+[0.816751] (-) TimerEvent: {}
+[0.917451] (-) TimerEvent: {}
+[1.018200] (-) TimerEvent: {}
+[1.067814] (detection_node_cpp) StdoutLine: {'line': b'-- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[1.118384] (-) TimerEvent: {}
+[1.184384] (detection_node_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.195346] (detection_node_cpp) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[1.218550] (-) TimerEvent: {}
+[1.319402] (-) TimerEvent: {}
+[1.420251] (-) TimerEvent: {}
+[1.521120] (-) TimerEvent: {}
+[1.602254] (detection_node_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.621284] (-) TimerEvent: {}
+[1.722127] (-) TimerEvent: {}
+[1.767070] (detection_node_cpp) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[1.772889] (detection_node_cpp) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.822318] (-) TimerEvent: {}
+[1.923284] (-) TimerEvent: {}
+[2.024183] (-) TimerEvent: {}
+[2.124951] (-) TimerEvent: {}
+[2.211462] (detection_node_cpp) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[2.225139] (-) TimerEvent: {}
+[2.325869] (-) TimerEvent: {}
+[2.426630] (-) TimerEvent: {}
+[2.527482] (-) TimerEvent: {}
+[2.534102] (detection_node_cpp) StdoutLine: {'line': b'-- Found cv_bridge: 3.0.7 (/opt/ros/foxy/share/cv_bridge/cmake)\n'}
+[2.578996] (detection_node_cpp) StdoutLine: {'line': b'-- Found pcl_conversions: 2.2.1 (/opt/ros/foxy/share/pcl_conversions/cmake)\n'}
+[2.627640] (-) TimerEvent: {}
+[2.728370] (-) TimerEvent: {}
+[2.829123] (-) TimerEvent: {}
+[2.929873] (-) TimerEvent: {}
+[3.030626] (-) TimerEvent: {}
+[3.131466] (-) TimerEvent: {}
+[3.141423] (detection_node_cpp) StderrLine: {'line': b'CMake Error at CMakeLists.txt:29 (install):\n'}
+[3.142297] (detection_node_cpp) StderrLine: {'line': b'  install TARGETS given target "detection_node_cpp" which does not exist.\n'}
+[3.142622] (detection_node_cpp) StderrLine: {'line': b'\n'}
+[3.142970] (detection_node_cpp) StderrLine: {'line': b'\n'}
+[3.143226] (detection_node_cpp) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[3.231623] (-) TimerEvent: {}
+[3.332434] (-) TimerEvent: {}
+[3.374102] (detection_node_cpp) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[3.402508] (detection_node_cpp) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[3.403404] (detection_node_cpp) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[3.403738] (detection_node_cpp) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[3.430997] (detection_node_cpp) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[3.431423] (detection_node_cpp) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[3.432521] (-) TimerEvent: {}
+[3.435349] (detection_node_cpp) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[3.444490] (detection_node_cpp) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.448740] (detection_node_cpp) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[3.478458] (detection_node_cpp) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[3.478988] (detection_node_cpp) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[3.482642] (detection_node_cpp) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.496800] (detection_node_cpp) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[3.497281] (detection_node_cpp) StdoutLine: {'line': b'See also "/home/auto/detection_node_cpp/build/detection_node_cpp/CMakeFiles/CMakeOutput.log".\n'}
+[3.497577] (detection_node_cpp) StdoutLine: {'line': b'See also "/home/auto/detection_node_cpp/build/detection_node_cpp/CMakeFiles/CMakeError.log".\n'}
+[3.519673] (detection_node_cpp) CommandEnded: {'returncode': 1}
+[3.533774] (-) TimerEvent: {}
+[3.642556] (-) TimerEvent: {}
+[3.661708] (detection_node_cpp) JobEnded: {'identifier': 'detection_node_cpp', 'rc': 1}
+[3.673840] (-) EventReactorShutdown: {}

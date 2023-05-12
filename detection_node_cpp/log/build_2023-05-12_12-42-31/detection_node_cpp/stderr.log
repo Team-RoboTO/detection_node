@@ -1,0 +1,7 @@
+[01m[K/home/auto/detection_node_cpp/src/detection_node_cpp.cpp:7:10:[m[K [01;31m[Kfatal error: [m[Kpcl/point_cloud.h: No such file or directory
+    7 | #include [01;31m[K<pcl/point_cloud.h>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/detection_node_cpp.dir/build.make:63: CMakeFiles/detection_node_cpp.dir/src/detection_node_cpp.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:105: CMakeFiles/detection_node_cpp.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

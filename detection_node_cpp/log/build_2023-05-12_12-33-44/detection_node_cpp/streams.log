@@ -1,0 +1,33 @@
+[0.104s] Invoking command in '/home/auto/detection_node_cpp/build/detection_node_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/auto/ros2_ws/install/position_detection:/home/auto/ros2_ws/install/detection_node /usr/bin/cmake /home/auto/detection_node_cpp -DCMAKE_INSTALL_PREFIX=/home/auto/detection_node_cpp/install/detection_node_cpp
+[0.159s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.251s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.066s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.183s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.194s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.601s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.765s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.771s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.210s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[2.532s] -- Found cv_bridge: 3.0.7 (/opt/ros/foxy/share/cv_bridge/cmake)
+[2.577s] -- Found pcl_conversions: 2.2.1 (/opt/ros/foxy/share/pcl_conversions/cmake)
+[3.140s] CMake Error at CMakeLists.txt:29 (install):
+[3.140s]   install TARGETS given target "detection_node_cpp" which does not exist.
+[3.141s] 
+[3.141s] 
+[3.141s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[3.372s] -- Added test 'copyright' to check source files copyright and LICENSE
+[3.401s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.401s] -- Configured cppcheck include dirs: 
+[3.402s] -- Configured cppcheck exclude dirs and/or files: 
+[3.429s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[3.430s] -- Configured cpplint exclude dirs and/or files: 
+[3.433s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.443s] -- Added test 'lint_cmake' to check CMake code style
+[3.447s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[3.477s] -- Added test 'uncrustify' to check C / C++ code style
+[3.477s] -- Configured uncrustify additional arguments: 
+[3.481s] -- Added test 'xmllint' to check XML markup files
+[3.495s] -- Configuring incomplete, errors occurred!
+[3.495s] See also "/home/auto/detection_node_cpp/build/detection_node_cpp/CMakeFiles/CMakeOutput.log".
+[3.496s] See also "/home/auto/detection_node_cpp/build/detection_node_cpp/CMakeFiles/CMakeError.log".
+[3.519s] Invoked command in '/home/auto/detection_node_cpp/build/detection_node_cpp' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/auto/ros2_ws/install/position_detection:/home/auto/ros2_ws/install/detection_node /usr/bin/cmake /home/auto/detection_node_cpp -DCMAKE_INSTALL_PREFIX=/home/auto/detection_node_cpp/install/detection_node_cpp

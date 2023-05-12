@@ -1,0 +1,22 @@
+[0.096s] Invoking command in '/home/auto/detection_node_cpp/build/detection_node_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/auto/ros2_ws/install/position_detection:/home/auto/ros2_ws/install/detection_node /usr/bin/cmake /home/auto/detection_node_cpp -DCMAKE_INSTALL_PREFIX=/home/auto/detection_node_cpp/install/detection_node_cpp
+[0.152s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.245s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.052s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.165s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.175s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.575s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.734s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.740s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.169s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[2.494s] -- Found cv_bridge: 3.0.7 (/opt/ros/foxy/share/cv_bridge/cmake)
+[2.540s] -- Found pcl_conversions: 2.2.1 (/opt/ros/foxy/share/pcl_conversions/cmake)
+[2.990s] CMake Error at /opt/ros/foxy/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:42 (message):
+[2.991s]   ament_target_dependencies() the first argument must be a valid target name
+[2.991s] Call Stack (most recent call first):
+[2.991s]   CMakeLists.txt:27 (ament_target_dependencies)
+[2.991s] 
+[2.992s] 
+[3.000s] -- Configuring incomplete, errors occurred!
+[3.000s] See also "/home/auto/detection_node_cpp/build/detection_node_cpp/CMakeFiles/CMakeOutput.log".
+[3.000s] See also "/home/auto/detection_node_cpp/build/detection_node_cpp/CMakeFiles/CMakeError.log".
+[3.026s] Invoked command in '/home/auto/detection_node_cpp/build/detection_node_cpp' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/auto/ros2_ws/install/position_detection:/home/auto/ros2_ws/install/detection_node /usr/bin/cmake /home/auto/detection_node_cpp -DCMAKE_INSTALL_PREFIX=/home/auto/detection_node_cpp/install/detection_node_cpp

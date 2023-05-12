@@ -1,0 +1,41 @@
+[0.090s] Invoking command in '/home/auto/detection_node_cpp/build/detection_node_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/auto/ros2_ws/install/position_detection:/home/auto/ros2_ws/install/detection_node /usr/bin/cmake /home/auto/detection_node_cpp -DCMAKE_INSTALL_PREFIX=/home/auto/detection_node_cpp/install/detection_node_cpp
+[0.154s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.244s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.044s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.156s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.166s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.560s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.717s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.723s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.156s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[2.492s] -- Found cv_bridge: 3.0.7 (/opt/ros/foxy/share/cv_bridge/cmake)
+[2.530s] -- Found pcl_conversions: 2.2.1 (/opt/ros/foxy/share/pcl_conversions/cmake)
+[3.101s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[3.333s] -- Added test 'copyright' to check source files copyright and LICENSE
+[3.366s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.367s] -- Configured cppcheck include dirs: 
+[3.367s] -- Configured cppcheck exclude dirs and/or files: 
+[3.398s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[3.399s] -- Configured cpplint exclude dirs and/or files: 
+[3.403s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.412s] -- Added test 'lint_cmake' to check CMake code style
+[3.416s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[3.448s] -- Added test 'uncrustify' to check C / C++ code style
+[3.448s] -- Configured uncrustify additional arguments: 
+[3.453s] -- Added test 'xmllint' to check XML markup files
+[3.467s] -- Configuring done
+[3.470s] CMake Error at CMakeLists.txt:26 (add_executable):
+[3.471s]   Cannot find source file:
+[3.471s] 
+[3.472s]     src/my_file.cpp
+[3.472s] 
+[3.472s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+[3.472s]   .hpp .hxx .in .txx
+[3.473s] 
+[3.473s] 
+[3.476s] CMake Error at CMakeLists.txt:26 (add_executable):
+[3.477s]   No SOURCES given to target: detection_node_cpp
+[3.477s] 
+[3.477s] 
+[3.478s] CMake Generate step failed.  Build files cannot be regenerated correctly.
+[3.505s] Invoked command in '/home/auto/detection_node_cpp/build/detection_node_cpp' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/auto/ros2_ws/install/position_detection:/home/auto/ros2_ws/install/detection_node /usr/bin/cmake /home/auto/detection_node_cpp -DCMAKE_INSTALL_PREFIX=/home/auto/detection_node_cpp/install/detection_node_cpp

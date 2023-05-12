@@ -1,0 +1,17 @@
+In file included from [01m[K/home/auto/detection_node_cpp/src/detection_node_cpp.cpp:11[m[K:
+[01m[K/opt/ros/foxy/include/image_transport/image_transport.h:41:89:[m[K [01;36m[Knote: [m[K#pragma message: Warning: This header is deprecated. Use 'image_transport.hpp' instead
+   41 | #pragma message ("Warning: This header is deprecated. Use 'image_transport.hpp' instead"[01;36m[K)[m[K
+      |                                                                                         [01;36m[K^[m[K
+[01m[K/home/auto/detection_node_cpp/src/detection_node_cpp.cpp:[m[K In constructor ‘[01m[KPixelPosition::PixelPosition()[m[K’:
+[01m[K/home/auto/detection_node_cpp/src/detection_node_cpp.cpp:19:120:[m[K [01;31m[Kerror: [m[Kinvalid initialization of reference of type ‘[01m[Kconst Callback&[m[K’ {aka ‘[01m[Kconst std::function<void(const std::shared_ptr<const sensor_msgs::msg::Image_<std::allocator<void> > >&)>&[m[K’} from expression of type ‘[01m[Kstd::_Bind_helper<false, void (PixelPosition::*)(std::shared_ptr<sensor_msgs::msg::Image_<std::allocator<void> > >), PixelPosition*, const std::_Placeholder<1>&>::type[m[K’ {aka ‘[01m[Kstd::_Bind<void (PixelPosition::*(PixelPosition*, std::_Placeholder<1>))(std::shared_ptr<sensor_msgs::msg::Image_<std::allocator<void> > >)>[m[K’}
+   19 | t::create_subscription(this, "/zedm/zed_node/rgb/image_rect_color", [01;31m[Kstd::bind(&PixelPosition::imageCallback, this, std::placeholders::_1)[m[K, "raw", qos);
+      |                                                                     [01;31m[K~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+In file included from [01m[K/opt/ros/foxy/include/image_transport/image_transport.h:43[m[K,
+                 from [01m[K/home/auto/detection_node_cpp/src/detection_node_cpp.cpp:11[m[K:
+[01m[K/opt/ros/foxy/include/image_transport/image_transport.hpp:71:32:[m[K [01;36m[Knote: [m[Kin passing argument 3 of ‘[01m[Kimage_transport::Subscriber image_transport::create_subscription(rclcpp::Node*, const string&, const Callback&, const string&, rmw_qos_profile_t)[m[K’
+   71 |   [01;36m[Kconst Subscriber::Callback & callback[m[K,
+      |   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/detection_node_cpp.dir/build.make:63: CMakeFiles/detection_node_cpp.dir/src/detection_node_cpp.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:105: CMakeFiles/detection_node_cpp.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

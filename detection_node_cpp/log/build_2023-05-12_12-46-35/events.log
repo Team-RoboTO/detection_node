@@ -1,0 +1,459 @@
+[0.000000] (-) TimerEvent: {}
+[0.000883] (detection_node_cpp) JobQueued: {'identifier': 'detection_node_cpp', 'dependencies': OrderedDict()}
+[0.002178] (detection_node_cpp) JobStarted: {'identifier': 'detection_node_cpp'}
+[0.083784] (detection_node_cpp) JobProgress: {'identifier': 'detection_node_cpp', 'progress': 'cmake'}
+[0.086839] (detection_node_cpp) JobProgress: {'identifier': 'detection_node_cpp', 'progress': 'build'}
+[0.089205] (detection_node_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/auto/detection_node_cpp/build/detection_node_cpp', '--', '-j8', '-l8'], 'cwd': '/home/auto/detection_node_cpp/build/detection_node_cpp', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'auto'), ('SSH_AGENT_PID', '2558'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/rviz_ogre_vendor/lib/:/opt/ros/foxy/lib/aarch64-linux-gnu/:/home/auto/ros2_ws/install/zed_topic_benchmark_interfaces/lib:/home/auto/ros2_ws/install/zed_rgb_convert/lib:/home/auto/ros2_ws/install/zed_components/lib:/home/auto/ros2_ws/install/rviz_plugin_zed_od/lib:/home/auto/ros2_ws/install/zed_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/auto'), ('OLDPWD', '/home/auto/detection_node_cpp/src'), ('DESKTOP_SESSION', 'ubuntu'), ('JETSON_L4T', '35.3.1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('JETSON_MODEL', 'Jetson-AGX'), ('MANAGERPID', '1998'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/home/auto/ros2_ws/'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/auto/ros2_ws/install:/opt/ros/foxy'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'auto'), ('JETSON_MODULE', 'NVIDIA Jetson AGX Xavier (16 GB ram)'), ('JETSON_SERIAL_NUMBER', '0420719082490'), ('JOURNAL_STREAM', '7:55624'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/foxy/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/foxy/lib/pkgconfig'), ('JETSON_CODENAME', 'Galen'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'auto'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/opt/rviz_ogre_vendor/lib/:/opt/ros/foxy/bin:/home/auto/.local/bin:/root/.local/bin:/usr/local/cuda-11.4/bin:/home/auto/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2604,unix/ubuntu:/tmp/.ICE-unix/2604'), ('INVOCATION_ID', '52c506a4d2f042bcafc0e4639fe6317b'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/47182418_d5db_4a54_a0ee_118ca508a99c'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra194'), ('GNOME_TERMINAL_SERVICE', ':1.79'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/auto/ros2_ws/install/zed_ros2:/home/auto/ros2_ws/install/zed_multi_camera:/home/auto/ros2_ws/install/zed_display_rviz2:/home/auto/ros2_ws/install/zed_wrapper:/home/auto/ros2_ws/install/zed_tutorial_video:/home/auto/ros2_ws/install/zed_tutorial_pos_tracking:/home/auto/ros2_ws/install/zed_tutorial_depth:/home/auto/ros2_ws/install/zed_topic_benchmark_interfaces:/home/auto/ros2_ws/install/zed_rgb_convert:/home/auto/ros2_ws/install/zed_components:/home/auto/ros2_ws/install/rviz_plugin_zed_od:/home/auto/ros2_ws/install/position_detection:/home/auto/ros2_ws/install/detection_node:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('JETSON_CUDA_ARCH_BIN', '7.2'), ('PWD', '/home/auto/detection_node_cpp/build/detection_node_cpp'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/auto/ros2_ws/install/zed_topic_benchmark_interfaces/lib/python3.8/site-packages:/home/auto/ros2_ws/install/zed_interfaces/lib/python3.8/site-packages:/home/auto/ros2_ws/build/position_detection:/home/auto/ros2_ws/install/position_detection/lib/python3.8/site-packages:/home/auto/ros2_ws/install/new_detector/lib/python3.8/site-packages:/home/auto/ros2_ws/install/detection_node/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('JETSON_JETPACK', '5.1.1'), ('CMAKE_PREFIX_PATH', '/home/auto/ros2_ws/install/zed_ros2:/home/auto/ros2_ws/install/zed_multi_camera:/home/auto/ros2_ws/install/zed_display_rviz2:/home/auto/ros2_ws/install/zed_wrapper:/home/auto/ros2_ws/install/zed_tutorial_video:/home/auto/ros2_ws/install/zed_tutorial_pos_tracking:/home/auto/ros2_ws/install/zed_tutorial_depth:/home/auto/ros2_ws/install/zed_topic_benchmark_interfaces:/home/auto/ros2_ws/install/zed_rgb_convert:/home/auto/ros2_ws/install/zed_components:/home/auto/ros2_ws/install/rviz_plugin_zed_od:/home/auto/ros2_ws/install/zed_interfaces:/opt/ros/foxy:/home/auto/ros2_ws/install/position_detection:/home/auto/ros2_ws/install/detection_node'), ('JETSON_P_NUMBER', 'p2888-0001')]), 'shell': False}
+[0.108349] (-) TimerEvent: {}
+[0.204371] (detection_node_cpp) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.208440] (-) TimerEvent: {}
+[0.294649] (detection_node_cpp) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.308701] (-) TimerEvent: {}
+[0.409416] (-) TimerEvent: {}
+[0.510097] (-) TimerEvent: {}
+[0.610767] (-) TimerEvent: {}
+[0.711458] (-) TimerEvent: {}
+[0.812173] (-) TimerEvent: {}
+[0.912956] (-) TimerEvent: {}
+[1.013647] (-) TimerEvent: {}
+[1.098470] (detection_node_cpp) StdoutLine: {'line': b'-- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[1.113850] (-) TimerEvent: {}
+[1.210282] (detection_node_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.213954] (-) TimerEvent: {}
+[1.220880] (detection_node_cpp) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[1.314181] (-) TimerEvent: {}
+[1.415009] (-) TimerEvent: {}
+[1.516010] (-) TimerEvent: {}
+[1.616805] (-) TimerEvent: {}
+[1.628913] (detection_node_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.717013] (-) TimerEvent: {}
+[1.793183] (detection_node_cpp) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[1.798656] (detection_node_cpp) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.817090] (-) TimerEvent: {}
+[1.917618] (-) TimerEvent: {}
+[2.018255] (-) TimerEvent: {}
+[2.118978] (-) TimerEvent: {}
+[2.219669] (-) TimerEvent: {}
+[2.237836] (detection_node_cpp) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[2.319823] (-) TimerEvent: {}
+[2.420606] (-) TimerEvent: {}
+[2.521407] (-) TimerEvent: {}
+[2.569627] (detection_node_cpp) StdoutLine: {'line': b'-- Found cv_bridge: 3.0.7 (/opt/ros/foxy/share/cv_bridge/cmake)\n'}
+[2.614464] (detection_node_cpp) StdoutLine: {'line': b'-- Found pcl_conversions: 2.2.1 (/opt/ros/foxy/share/pcl_conversions/cmake)\n'}
+[2.621475] (-) TimerEvent: {}
+[2.722085] (-) TimerEvent: {}
+[2.822775] (-) TimerEvent: {}
+[2.923525] (-) TimerEvent: {}
+[3.024262] (-) TimerEvent: {}
+[3.124207] (detection_node_cpp) StdoutLine: {'line': b"-- Checking for module 'eigen3'\n"}
+[3.124938] (-) TimerEvent: {}
+[3.199735] (detection_node_cpp) StdoutLine: {'line': b'--   Found eigen3, version 3.3.7\n'}
+[3.225191] (-) TimerEvent: {}
+[3.325994] (-) TimerEvent: {}
+[3.387351] (detection_node_cpp) StdoutLine: {'line': b'-- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") \n'}
+[3.388576] (detection_node_cpp) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.3.7)\n'}
+[3.426118] (-) TimerEvent: {}
+[3.526746] (-) TimerEvent: {}
+[3.627286] (-) TimerEvent: {}
+[3.689098] (detection_node_cpp) StdoutLine: {'line': b"-- Checking for module 'libusb-1.0'\n"}
+[3.727437] (-) TimerEvent: {}
+[3.765490] (detection_node_cpp) StdoutLine: {'line': b'--   Found libusb-1.0, version 1.0.23\n'}
+[3.827572] (-) TimerEvent: {}
+[3.928291] (-) TimerEvent: {}
+[3.968981] (detection_node_cpp) StdoutLine: {'line': b'-- Found USB_10: /usr/lib/aarch64-linux-gnu/libusb-1.0.so  \n'}
+[4.028507] (-) TimerEvent: {}
+[4.129277] (-) TimerEvent: {}
+[4.230094] (-) TimerEvent: {}
+[4.257139] (detection_node_cpp) StdoutLine: {'line': b'-- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)\n'}
+[4.330303] (-) TimerEvent: {}
+[4.431290] (-) TimerEvent: {}
+[4.532381] (-) TimerEvent: {}
+[4.578941] (detection_node_cpp) StdoutLine: {'line': b'-- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)\n'}
+[4.632526] (-) TimerEvent: {}
+[4.733183] (-) TimerEvent: {}
+[4.789038] (detection_node_cpp) StdoutLine: {'line': b'-- The imported target "vtkParseOGLExt" references the file\n'}
+[4.789645] (detection_node_cpp) StdoutLine: {'line': b'   "/usr/bin/vtkParseOGLExt-7.1"\n'}
+[4.789916] (detection_node_cpp) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[4.790142] (detection_node_cpp) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[4.790369] (detection_node_cpp) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[4.790634] (detection_node_cpp) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[4.790875] (detection_node_cpp) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[4.791092] (detection_node_cpp) StdoutLine: {'line': b'but not all the files it references.\n'}
+[4.791308] (detection_node_cpp) StdoutLine: {'line': b'\n'}
+[4.793064] (detection_node_cpp) StdoutLine: {'line': b'-- The imported target "vtkRenderingPythonTkWidgets" references the file\n'}
+[4.793384] (detection_node_cpp) StdoutLine: {'line': b'   "/usr/lib/aarch64-linux-gnu/libvtkRenderingPythonTkWidgets.so"\n'}
+[4.793609] (detection_node_cpp) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[4.793900] (detection_node_cpp) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[4.794184] (detection_node_cpp) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[4.794402] (detection_node_cpp) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[4.794622] (detection_node_cpp) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[4.794866] (detection_node_cpp) StdoutLine: {'line': b'but not all the files it references.\n'}
+[4.795115] (detection_node_cpp) StdoutLine: {'line': b'\n'}
+[4.795832] (detection_node_cpp) StdoutLine: {'line': b'-- The imported target "vtk" references the file\n'}
+[4.796096] (detection_node_cpp) StdoutLine: {'line': b'   "/usr/bin/vtk"\n'}
+[4.796636] (detection_node_cpp) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[4.796922] (detection_node_cpp) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[4.797170] (detection_node_cpp) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[4.797399] (detection_node_cpp) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[4.797616] (detection_node_cpp) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[4.797884] (detection_node_cpp) StdoutLine: {'line': b'but not all the files it references.\n'}
+[4.798113] (detection_node_cpp) StdoutLine: {'line': b'\n'}
+[4.798340] (detection_node_cpp) StdoutLine: {'line': b'-- The imported target "pvtk" references the file\n'}
+[4.798556] (detection_node_cpp) StdoutLine: {'line': b'   "/usr/bin/pvtk"\n'}
+[4.798813] (detection_node_cpp) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[4.799050] (detection_node_cpp) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[4.799263] (detection_node_cpp) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[4.799499] (detection_node_cpp) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[4.799755] (detection_node_cpp) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[4.799985] (detection_node_cpp) StdoutLine: {'line': b'but not all the files it references.\n'}
+[4.800199] (detection_node_cpp) StdoutLine: {'line': b'\n'}
+[4.833328] (-) TimerEvent: {}
+[4.855134] (detection_node_cpp) StdoutLine: {'line': b'-- Found libusb-1.0: /usr/include  \n'}
+[4.858497] (detection_node_cpp) StdoutLine: {'line': b'-- Found PCL_COMMON: /usr/lib/aarch64-linux-gnu/libpcl_common.so  \n'}
+[4.861921] (detection_node_cpp) StdoutLine: {'line': b'-- Found PCL_OCTREE: /usr/lib/aarch64-linux-gnu/libpcl_octree.so  \n'}
+[4.865796] (detection_node_cpp) StdoutLine: {'line': b'-- Found PCL_IO: /usr/lib/aarch64-linux-gnu/libpcl_io.so  \n'}
+[4.933439] (-) TimerEvent: {}
+[4.989392] (detection_node_cpp) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[5.033595] (-) TimerEvent: {}
+[5.134206] (-) TimerEvent: {}
+[5.220853] (detection_node_cpp) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[5.234333] (-) TimerEvent: {}
+[5.269729] (detection_node_cpp) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[5.271491] (detection_node_cpp) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[5.271844] (detection_node_cpp) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[5.319040] (detection_node_cpp) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[5.319541] (detection_node_cpp) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[5.326075] (detection_node_cpp) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[5.334428] (-) TimerEvent: {}
+[5.338382] (detection_node_cpp) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[5.345118] (detection_node_cpp) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[5.392268] (detection_node_cpp) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[5.392881] (detection_node_cpp) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[5.399080] (detection_node_cpp) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[5.414714] (detection_node_cpp) StdoutLine: {'line': b'-- Configuring done\n'}
+[5.434574] (-) TimerEvent: {}
+[5.535286] (-) TimerEvent: {}
+[5.568534] (detection_node_cpp) StdoutLine: {'line': b'-- Generating done\n'}
+[5.575942] (detection_node_cpp) StdoutLine: {'line': b'-- Build files have been written to: /home/auto/detection_node_cpp/build/detection_node_cpp\n'}
+[5.635457] (-) TimerEvent: {}
+[5.702639] (detection_node_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target detection_node_cpp\x1b[0m\n'}
+[5.735672] (-) TimerEvent: {}
+[5.795218] (detection_node_cpp) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/detection_node_cpp.dir/src/detection_node_cpp.cpp.o\x1b[0m\n'}
+[5.835834] (-) TimerEvent: {}
+[5.936619] (-) TimerEvent: {}
+[6.037380] (-) TimerEvent: {}
+[6.138195] (-) TimerEvent: {}
+[6.238982] (-) TimerEvent: {}
+[6.339735] (-) TimerEvent: {}
+[6.440584] (-) TimerEvent: {}
+[6.541366] (-) TimerEvent: {}
+[6.642146] (-) TimerEvent: {}
+[6.742940] (-) TimerEvent: {}
+[6.843736] (-) TimerEvent: {}
+[6.944566] (-) TimerEvent: {}
+[7.045347] (-) TimerEvent: {}
+[7.146118] (-) TimerEvent: {}
+[7.246864] (-) TimerEvent: {}
+[7.347678] (-) TimerEvent: {}
+[7.448442] (-) TimerEvent: {}
+[7.549247] (-) TimerEvent: {}
+[7.650063] (-) TimerEvent: {}
+[7.750830] (-) TimerEvent: {}
+[7.851601] (-) TimerEvent: {}
+[7.952360] (-) TimerEvent: {}
+[8.053176] (-) TimerEvent: {}
+[8.153932] (-) TimerEvent: {}
+[8.254698] (-) TimerEvent: {}
+[8.355493] (-) TimerEvent: {}
+[8.456281] (-) TimerEvent: {}
+[8.557099] (-) TimerEvent: {}
+[8.657884] (-) TimerEvent: {}
+[8.758667] (-) TimerEvent: {}
+[8.859435] (-) TimerEvent: {}
+[8.960187] (-) TimerEvent: {}
+[9.060993] (-) TimerEvent: {}
+[9.161796] (-) TimerEvent: {}
+[9.262546] (-) TimerEvent: {}
+[9.363321] (-) TimerEvent: {}
+[9.464066] (-) TimerEvent: {}
+[9.564868] (-) TimerEvent: {}
+[9.665646] (-) TimerEvent: {}
+[9.766410] (-) TimerEvent: {}
+[9.867175] (-) TimerEvent: {}
+[9.967947] (-) TimerEvent: {}
+[10.068803] (-) TimerEvent: {}
+[10.169564] (-) TimerEvent: {}
+[10.270343] (-) TimerEvent: {}
+[10.371183] (-) TimerEvent: {}
+[10.471948] (-) TimerEvent: {}
+[10.572791] (-) TimerEvent: {}
+[10.673581] (-) TimerEvent: {}
+[10.774372] (-) TimerEvent: {}
+[10.875172] (-) TimerEvent: {}
+[10.975936] (-) TimerEvent: {}
+[11.076922] (-) TimerEvent: {}
+[11.177725] (-) TimerEvent: {}
+[11.278569] (-) TimerEvent: {}
+[11.379452] (-) TimerEvent: {}
+[11.480397] (-) TimerEvent: {}
+[11.581434] (-) TimerEvent: {}
+[11.682223] (-) TimerEvent: {}
+[11.783060] (-) TimerEvent: {}
+[11.883922] (-) TimerEvent: {}
+[11.984880] (-) TimerEvent: {}
+[12.085679] (-) TimerEvent: {}
+[12.186465] (-) TimerEvent: {}
+[12.287298] (-) TimerEvent: {}
+[12.388164] (-) TimerEvent: {}
+[12.489069] (-) TimerEvent: {}
+[12.589866] (-) TimerEvent: {}
+[12.690600] (-) TimerEvent: {}
+[12.791437] (-) TimerEvent: {}
+[12.892239] (-) TimerEvent: {}
+[12.993099] (-) TimerEvent: {}
+[13.093926] (-) TimerEvent: {}
+[13.194705] (-) TimerEvent: {}
+[13.295555] (-) TimerEvent: {}
+[13.396381] (-) TimerEvent: {}
+[13.497232] (-) TimerEvent: {}
+[13.598039] (-) TimerEvent: {}
+[13.698785] (-) TimerEvent: {}
+[13.799643] (-) TimerEvent: {}
+[13.900518] (-) TimerEvent: {}
+[14.001307] (-) TimerEvent: {}
+[14.102157] (-) TimerEvent: {}
+[14.202980] (-) TimerEvent: {}
+[14.303787] (-) TimerEvent: {}
+[14.404618] (-) TimerEvent: {}
+[14.505409] (-) TimerEvent: {}
+[14.606206] (-) TimerEvent: {}
+[14.707015] (-) TimerEvent: {}
+[14.807831] (-) TimerEvent: {}
+[14.908628] (-) TimerEvent: {}
+[15.009494] (-) TimerEvent: {}
+[15.110339] (-) TimerEvent: {}
+[15.211187] (-) TimerEvent: {}
+[15.312019] (-) TimerEvent: {}
+[15.412914] (-) TimerEvent: {}
+[15.513704] (-) TimerEvent: {}
+[15.614493] (-) TimerEvent: {}
+[15.715275] (-) TimerEvent: {}
+[15.816083] (-) TimerEvent: {}
+[15.917017] (-) TimerEvent: {}
+[16.017819] (-) TimerEvent: {}
+[16.118622] (-) TimerEvent: {}
+[16.219441] (-) TimerEvent: {}
+[16.320245] (-) TimerEvent: {}
+[16.421139] (-) TimerEvent: {}
+[16.521958] (-) TimerEvent: {}
+[16.622764] (-) TimerEvent: {}
+[16.723640] (-) TimerEvent: {}
+[16.824566] (-) TimerEvent: {}
+[16.925374] (-) TimerEvent: {}
+[17.026200] (-) TimerEvent: {}
+[17.127022] (-) TimerEvent: {}
+[17.227865] (-) TimerEvent: {}
+[17.328701] (-) TimerEvent: {}
+[17.429480] (-) TimerEvent: {}
+[17.530134] (-) TimerEvent: {}
+[17.630853] (-) TimerEvent: {}
+[17.731534] (-) TimerEvent: {}
+[17.832353] (-) TimerEvent: {}
+[17.933218] (-) TimerEvent: {}
+[18.034003] (-) TimerEvent: {}
+[18.134782] (-) TimerEvent: {}
+[18.235523] (-) TimerEvent: {}
+[18.336234] (-) TimerEvent: {}
+[18.436917] (-) TimerEvent: {}
+[18.537531] (-) TimerEvent: {}
+[18.638394] (-) TimerEvent: {}
+[18.739227] (-) TimerEvent: {}
+[18.840105] (-) TimerEvent: {}
+[18.940974] (-) TimerEvent: {}
+[19.041646] (-) TimerEvent: {}
+[19.142287] (-) TimerEvent: {}
+[19.242997] (-) TimerEvent: {}
+[19.343724] (-) TimerEvent: {}
+[19.444574] (-) TimerEvent: {}
+[19.545376] (-) TimerEvent: {}
+[19.646043] (-) TimerEvent: {}
+[19.746651] (-) TimerEvent: {}
+[19.847372] (-) TimerEvent: {}
+[19.947990] (-) TimerEvent: {}
+[20.048614] (-) TimerEvent: {}
+[20.149364] (-) TimerEvent: {}
+[20.250085] (-) TimerEvent: {}
+[20.350785] (-) TimerEvent: {}
+[20.451426] (-) TimerEvent: {}
+[20.552065] (-) TimerEvent: {}
+[20.652672] (-) TimerEvent: {}
+[20.753479] (-) TimerEvent: {}
+[20.854186] (-) TimerEvent: {}
+[20.954818] (-) TimerEvent: {}
+[21.055455] (-) TimerEvent: {}
+[21.156011] (-) TimerEvent: {}
+[21.256654] (-) TimerEvent: {}
+[21.357448] (-) TimerEvent: {}
+[21.458143] (-) TimerEvent: {}
+[21.558807] (-) TimerEvent: {}
+[21.659538] (-) TimerEvent: {}
+[21.760292] (-) TimerEvent: {}
+[21.861180] (-) TimerEvent: {}
+[21.961970] (-) TimerEvent: {}
+[22.062803] (-) TimerEvent: {}
+[22.163605] (-) TimerEvent: {}
+[22.264376] (-) TimerEvent: {}
+[22.365191] (-) TimerEvent: {}
+[22.465954] (-) TimerEvent: {}
+[22.566739] (-) TimerEvent: {}
+[22.667525] (-) TimerEvent: {}
+[22.768290] (-) TimerEvent: {}
+[22.869065] (-) TimerEvent: {}
+[22.969882] (-) TimerEvent: {}
+[23.070585] (-) TimerEvent: {}
+[23.171354] (-) TimerEvent: {}
+[23.272101] (-) TimerEvent: {}
+[23.372933] (-) TimerEvent: {}
+[23.473686] (-) TimerEvent: {}
+[23.574429] (-) TimerEvent: {}
+[23.675220] (-) TimerEvent: {}
+[23.776013] (-) TimerEvent: {}
+[23.876872] (-) TimerEvent: {}
+[23.977681] (-) TimerEvent: {}
+[24.078490] (-) TimerEvent: {}
+[24.179300] (-) TimerEvent: {}
+[24.280113] (-) TimerEvent: {}
+[24.380949] (-) TimerEvent: {}
+[24.481758] (-) TimerEvent: {}
+[24.582531] (-) TimerEvent: {}
+[24.683292] (-) TimerEvent: {}
+[24.784048] (-) TimerEvent: {}
+[24.884868] (-) TimerEvent: {}
+[24.985632] (-) TimerEvent: {}
+[25.086410] (-) TimerEvent: {}
+[25.187179] (-) TimerEvent: {}
+[25.276370] (detection_node_cpp) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/auto/detection_node_cpp/src/detection_node_cpp.cpp:11\x1b[m\x1b[K:\n'}
+[25.277304] (detection_node_cpp) StderrLine: {'line': b"\x1b[01m\x1b[K/opt/ros/foxy/include/image_transport/image_transport.h:41:89:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K#pragma message: Warning: This header is deprecated. Use 'image_transport.hpp' instead\n"}
+[25.277594] (detection_node_cpp) StderrLine: {'line': b'   41 | #pragma message ("Warning: This header is deprecated. Use \'image_transport.hpp\' instead"\x1b[01;36m\x1b[K)\x1b[m\x1b[K\n'}
+[25.277913] (detection_node_cpp) StderrLine: {'line': b'      |                                                                                         \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[25.287267] (-) TimerEvent: {}
+[25.387881] (-) TimerEvent: {}
+[25.488781] (-) TimerEvent: {}
+[25.589621] (-) TimerEvent: {}
+[25.610973] (detection_node_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/auto/detection_node_cpp/src/detection_node_cpp.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KPixelPosition::PixelPosition()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[25.611555] (detection_node_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/auto/detection_node_cpp/src/detection_node_cpp.cpp:19:120:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid initialization of reference of type \xe2\x80\x98\x1b[01m\x1b[Kconst Callback&\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kconst std::function<void(const std::shared_ptr<const sensor_msgs::msg::Image_<std::allocator<void> > >&)>&\x1b[m\x1b[K\xe2\x80\x99} from expression of type \xe2\x80\x98\x1b[01m\x1b[Kstd::_Bind_helper<false, void (PixelPosition::*)(std::shared_ptr<sensor_msgs::msg::Image_<std::allocator<void> > >), PixelPosition*, const std::_Placeholder<1>&>::type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstd::_Bind<void (PixelPosition::*(PixelPosition*, std::_Placeholder<1>))(std::shared_ptr<sensor_msgs::msg::Image_<std::allocator<void> > >)>\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[25.611852] (detection_node_cpp) StderrLine: {'line': b'   19 | t::create_subscription(this, "/zedm/zed_node/rgb/image_rect_color", \x1b[01;31m\x1b[Kstd::bind(&PixelPosition::imageCallback, this, std::placeholders::_1)\x1b[m\x1b[K, "raw", qos);\n'}
+[25.612179] (detection_node_cpp) StderrLine: {'line': b'      |                                                                     \x1b[01;31m\x1b[K~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[25.612417] (detection_node_cpp) StderrLine: {'line': b'\n'}
+[25.612749] (detection_node_cpp) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/image_transport/image_transport.h:43\x1b[m\x1b[K,\n'}
+[25.613004] (detection_node_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/auto/detection_node_cpp/src/detection_node_cpp.cpp:11\x1b[m\x1b[K:\n'}
+[25.613243] (detection_node_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/image_transport/image_transport.hpp:71:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin passing argument 3 of \xe2\x80\x98\x1b[01m\x1b[Kimage_transport::Subscriber image_transport::create_subscription(rclcpp::Node*, const string&, const Callback&, const string&, rmw_qos_profile_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[25.613473] (detection_node_cpp) StderrLine: {'line': b'   71 |   \x1b[01;36m\x1b[Kconst Subscriber::Callback & callback\x1b[m\x1b[K,\n'}
+[25.613743] (detection_node_cpp) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[25.689814] (-) TimerEvent: {}
+[25.790557] (-) TimerEvent: {}
+[25.891357] (-) TimerEvent: {}
+[25.992157] (-) TimerEvent: {}
+[26.092964] (-) TimerEvent: {}
+[26.193729] (-) TimerEvent: {}
+[26.294516] (-) TimerEvent: {}
+[26.395298] (-) TimerEvent: {}
+[26.496096] (-) TimerEvent: {}
+[26.596876] (-) TimerEvent: {}
+[26.697675] (-) TimerEvent: {}
+[26.798476] (-) TimerEvent: {}
+[26.899337] (-) TimerEvent: {}
+[27.000119] (-) TimerEvent: {}
+[27.100938] (-) TimerEvent: {}
+[27.201762] (-) TimerEvent: {}
+[27.302542] (-) TimerEvent: {}
+[27.403340] (-) TimerEvent: {}
+[27.504112] (-) TimerEvent: {}
+[27.604941] (-) TimerEvent: {}
+[27.705801] (-) TimerEvent: {}
+[27.806631] (-) TimerEvent: {}
+[27.907398] (-) TimerEvent: {}
+[28.008220] (-) TimerEvent: {}
+[28.109144] (-) TimerEvent: {}
+[28.209934] (-) TimerEvent: {}
+[28.310813] (-) TimerEvent: {}
+[28.411650] (-) TimerEvent: {}
+[28.512446] (-) TimerEvent: {}
+[28.613272] (-) TimerEvent: {}
+[28.714085] (-) TimerEvent: {}
+[28.814909] (-) TimerEvent: {}
+[28.915673] (-) TimerEvent: {}
+[29.016499] (-) TimerEvent: {}
+[29.117279] (-) TimerEvent: {}
+[29.218067] (-) TimerEvent: {}
+[29.318892] (-) TimerEvent: {}
+[29.419687] (-) TimerEvent: {}
+[29.520532] (-) TimerEvent: {}
+[29.621305] (-) TimerEvent: {}
+[29.722098] (-) TimerEvent: {}
+[29.822832] (-) TimerEvent: {}
+[29.923644] (-) TimerEvent: {}
+[30.024437] (-) TimerEvent: {}
+[30.125352] (-) TimerEvent: {}
+[30.226196] (-) TimerEvent: {}
+[30.327040] (-) TimerEvent: {}
+[30.427880] (-) TimerEvent: {}
+[30.528815] (-) TimerEvent: {}
+[30.629733] (-) TimerEvent: {}
+[30.730599] (-) TimerEvent: {}
+[30.831383] (-) TimerEvent: {}
+[30.932219] (-) TimerEvent: {}
+[31.033100] (-) TimerEvent: {}
+[31.133895] (-) TimerEvent: {}
+[31.234694] (-) TimerEvent: {}
+[31.335472] (-) TimerEvent: {}
+[31.436205] (-) TimerEvent: {}
+[31.537014] (-) TimerEvent: {}
+[31.637738] (-) TimerEvent: {}
+[31.738555] (-) TimerEvent: {}
+[31.839365] (-) TimerEvent: {}
+[31.940173] (-) TimerEvent: {}
+[32.041317] (-) TimerEvent: {}
+[32.142073] (-) TimerEvent: {}
+[32.242782] (-) TimerEvent: {}
+[32.343518] (-) TimerEvent: {}
+[32.444340] (-) TimerEvent: {}
+[32.545183] (-) TimerEvent: {}
+[32.645960] (-) TimerEvent: {}
+[32.746818] (-) TimerEvent: {}
+[32.847608] (-) TimerEvent: {}
+[32.948357] (-) TimerEvent: {}
+[33.049093] (-) TimerEvent: {}
+[33.149710] (-) TimerEvent: {}
+[33.251090] (-) TimerEvent: {}
+[33.351849] (-) TimerEvent: {}
+[33.452609] (-) TimerEvent: {}
+[33.553410] (-) TimerEvent: {}
+[33.654246] (-) TimerEvent: {}
+[33.755011] (-) TimerEvent: {}
+[33.855808] (-) TimerEvent: {}
+[33.956592] (-) TimerEvent: {}
+[34.057379] (-) TimerEvent: {}
+[34.158190] (-) TimerEvent: {}
+[34.259037] (-) TimerEvent: {}
+[34.359885] (-) TimerEvent: {}
+[34.460820] (-) TimerEvent: {}
+[34.561640] (-) TimerEvent: {}
+[34.662516] (-) TimerEvent: {}
+[34.763369] (-) TimerEvent: {}
+[34.864223] (-) TimerEvent: {}
+[34.965338] (-) TimerEvent: {}
+[35.066395] (-) TimerEvent: {}
+[35.167252] (-) TimerEvent: {}
+[35.268117] (-) TimerEvent: {}
+[35.368954] (-) TimerEvent: {}
+[35.469787] (-) TimerEvent: {}
+[35.567679] (detection_node_cpp) StderrLine: {'line': b'make[2]: *** [CMakeFiles/detection_node_cpp.dir/build.make:63: CMakeFiles/detection_node_cpp.dir/src/detection_node_cpp.cpp.o] Error 1\n'}
+[35.568745] (detection_node_cpp) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:105: CMakeFiles/detection_node_cpp.dir/all] Error 2\n'}
+[35.569812] (detection_node_cpp) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[35.570286] (-) TimerEvent: {}
+[35.579754] (detection_node_cpp) CommandEnded: {'returncode': 2}
+[35.671397] (-) TimerEvent: {}
+[35.773324] (-) TimerEvent: {}
+[35.783077] (detection_node_cpp) JobEnded: {'identifier': 'detection_node_cpp', 'rc': 2}
+[35.795667] (-) EventReactorShutdown: {}
