@@ -1,83 +1,62 @@
 import rclpy
+from rclpy.qos import QoSProfile, QoSReliabilityPolicy, QoSHistoryPolicy
+
 from rclpy.node import Node
 from sensor_msgs.msg import Image, PointCloud2, PointField
 from cv_bridge import CvBridge
 import numpy as np
 import cv2
 from std_msgs.msg import Float32MultiArray, MultiArrayDimension
+from geometry_msgs.msg import Point
 import struct
 import matplotlib.pyplot as plt
 import threading
+from custom_msg.msg import Array
+import ros2_numpy as rnp 
+from vision_msgs.msg import Detection2DArray
+
 
 class PixelPosition(Node):
 
     def __init__(self):
         super().__init__('pixel_position')
+        qos_profile = QoSProfile(
+            reliability=QoSReliabilityPolicy.RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT,
+            history=QoSHistoryPolicy.RMW_QOS_POLICY_HISTORY_KEEP_LAST,
+            depth=1
+        )
         self.subscription_pointcloud = self.create_subscription(PointCloud2,
-                                        '/zedm/zed_node/point_cloud/cloud_registered',
-                                        self.pointcloud_callback, 10)
-        self.subscription_bbox = self.create_subscription(Float32MultiArray,
+                                        '/zed2/zed_node/point_cloud/cloud_registered',
+                                        self.pointcloud_callback, qos_profile=qos_profile)
+        self.subscription_bbox = self.create_subscription(Detection2DArray,
                             '/yolo/bboxs',
-                            self.subscriber_callback, 10)
-        self.publisher = self.create_publisher(Float32MultiArray, 'yolo/enemy_pose', 10)
+                            self.subscriber_callback, qos_profile=qos_profile)
+        print("nodo inizializzato")
+        self.publisher = self.create_publisher(Point, 'yolo/enemy_pose', qos_profile=qos_profile)
         self.bridge = CvBridge()
         self.pointcloud = None
         self.bboxs = None
-        self.figx, self.ax = plt.subplots()
-        self.figy, self.ay = plt.subplots()
-        self.figz, self.az = plt.subplots()
-        self.x = []
-        self.y = []
-        self.z = []
 
     def pointcloud_callback(self, msg):
         # Salva la point cloud come un oggetto numpy
-        self.pointcloud = np.frombuffer(msg.data, dtype=np.float32).reshape(msg.height, msg.width, -1)
+        self.pointcloud = rnp.point_cloud2.pointcloud2_to_xyz_array(msg, remove_nans=False)
 
     def subscriber_callback(self, msg):
-            if msg.layout.dim[0].label == 'full':
-                delay = msg.data[-1]
-                msg.data.pop(-1)  #pop last value that is the delay time between two detection
-                self.bboxs = np.array(msg.data, dtype=np.float32)
-                self.bboxs = np.reshape(self.bboxs, (msg.layout.dim[0].size,msg.layout.dim[0].stride))
-                bbox = self.bboxs[-1, :]
-                x1, y1, x2, y2 =int(bbox[0]),int(bbox[1]),int(bbox[2]),int(bbox[3])
-                xc = (x2 + x1) // 2
-                yc = (y2 + y1) // 2
-                xyz = self.pointcloud[y-3:y+4, x-3:x+4, :3]
+        print("sottoscrivo")
+        if self.pointcloud is not None:
+            print("pointcloud not none")
+            if len(msg.detections) != 0:
+                print("someting detected")
+                xc, yc=int(msg.detections[0].bbox.center.position.x),int(msg.detections[0].bbox.center.position.y)
+                print(self.pointcloud.shape)
+                xyz = self.pointcloud[yc-3:yc+4, xc-3:xc+4, :]
                 xyz = np.nanmean(xyz, axis=(0, 1))
-                # self.x.append(xyz[0])
-                # self.y.append(xyz[1])
-                # self.z.append(xyz[2])
-                # print(xyz)
-                msg = Float32MultiArray()
-                dim = MultiArrayDimension()
-                if xyz.size != 0:
-                    dim.label= 'full'
-                    dim.stride = 3
-                    dim.size = 1
-                    msg.layout.dim.append(dim)
-                    msg.data = xyz.tolist()
-                    msg.data.append(delay)
-                else:
-                    dim.label= 'empty'
-                    dim.stride = 0
-                    dim.size = 0
-                    msg.layout.dim.append(dim)
-                    msg.data = [0.0]
-                self.publisher.publish(msg)
-                # self.ax.clear()
-                # self.ax.plot(self.x)
-                # self.ay.clear()
-                # self.ay.plot(self.y)
-                # self.az.clear()
-                # self.az.plot(self.z)
-                # self.figx.canvas.draw()
-                # self.figy.canvas.draw()
-                # self.figz.canvas.draw()
-                # plt.pause(0.0001)
-            elif msg.layout.dim[0] == 'empty':
-                self.bboxs = None
+                point = Point()
+                point.x =xyz[0]
+                point.y =xyz[1]
+                point.z =xyz[2]
+                self.publisher.publish(point)
+            
     
      
 

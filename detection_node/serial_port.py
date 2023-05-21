@@ -5,7 +5,7 @@ import struct
 import serial
 import numpy as np
 import rclpy
-
+from rclpy.qos import QoSProfile, QoSReliabilityPolicy, QoSHistoryPolicy
 from std_msgs.msg import Float32MultiArray, MultiArrayDimension
 
 class Ser:
@@ -64,11 +64,16 @@ class Ser:
 class SerialNode(Node):
     def __init__(self):
         super().__init__('serial_node')
+        qos_profile = QoSProfile(
+            reliability=QoSReliabilityPolicy.RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT,
+            history=QoSHistoryPolicy.RMW_QOS_POLICY_HISTORY_KEEP_LAST,
+            depth=1
+        )
         self.subscription = self.create_subscription(
             Float32MultiArray,
             '/yolo/enemy_pose',
             self.listener_callback,
-            5
+            qos_profile=qos_profile
         )
         self.serial = Ser()
 
