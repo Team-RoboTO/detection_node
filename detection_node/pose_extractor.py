@@ -11,7 +11,6 @@ from geometry_msgs.msg import Point
 import struct
 import matplotlib.pyplot as plt
 import threading
-from custom_msg.msg import Array
 import ros2_numpy as rnp 
 from vision_msgs.msg import Detection2DArray
 
