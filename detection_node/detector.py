@@ -26,20 +26,22 @@ class DetectorAndTracker(Node):
         qos_profile = QoSProfile(
             reliability=QoSReliabilityPolicy.RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT,
             history=QoSHistoryPolicy.RMW_QOS_POLICY_HISTORY_KEEP_LAST,
-            depth=1
+            depth=5
         )
         self.bridge = CvBridge()
         self.rgb_subscriber = self.create_subscription(Image,
-                                "/zed2/zed_node/rgb/image_rect_color",
+                                "/zed2/zed_node/left/image_rect_color",
                                 self.run,qos_profile=qos_profile)
         self._pub = self.create_publisher(Detection2DArray, "/yolo/bboxs",
-                                         qos_profile=qos_profile) 
+                                         qos_profile=qos_profile)
+        self._pub_image = self.create_publisher(Image, "/yolo/image_with_boxes",
+                                         qos_profile=qos_profile)
           
           # This will automatically download the trained model
-        print('cuda availability', torch.cuda.is_available())
+        print('cuda availability', torch.cuda.is_available(), 'device id',  torch.cuda.current_device())
         self.frame = None
         self.tt = -1.0
-        self.model = YOLO("/home/auto/Downloads/best_armor.engine", task='detect')
+        self.model = YOLO("/home/auto/Downloads/ai_ws/best_armor.engine", task='detect')
         print("yolo is loaded...")
 
     def run(self, frame):
@@ -47,7 +49,7 @@ class DetectorAndTracker(Node):
         
         self.frame = self.bridge.imgmsg_to_cv2(frame, "bgr8")
         start = time.time()
-        results = self.model.track(self.frame,classes=0, device=0,imgsz=(896,512), verbose=True,)  # Compute predictions
+        results = self.model.track(self.frame,classes=0, device=0, half=True, persist=True)  # Compute predictions
         t = time.time()
         print("model exec", t-start)
         if self.tt !=-1:
@@ -58,26 +60,27 @@ class DetectorAndTracker(Node):
         print("delay", delay)
         detections_msg = Detection2DArray()
         detections_msg.header = frame.header
-        r =results[0]
-        if len(r.boxes) > 0:
-            for b in r.boxes:
-                box = b.xywh.cpu().numpy()
-                detection = Detection2D()
-                detection.bbox.center.position.x = float(box[0, 0])
-                detection.bbox.center.position.y = float(box[0, 1])
-                detection.bbox.size_x = float(box[0, 2])
-                detection.bbox.size_y = float(box[0, 3]) 
-                hypothesis = ObjectHypothesisWithPose()
-                if b.is_track:     
-                    hypothesis.hypothesis.class_id = str(b.id.cpu().numpy()[0])
-                hypothesis.hypothesis.score = float(delay)
-                detection.results.append(hypothesis)
-                detections_msg.detections.append(detection)
-            self._pub.publish(detections_msg)
-            end=time.time()
-            print("final elaboration", end-t)
-            print("complete elaboration", end-start)
-
+        for r in results:
+            if len(r.boxes) > 0:
+                for b in r.boxes:
+                    box = b.xywh.cpu().numpy()
+                    detection = Detection2D()
+                    detection.bbox.center.position.x = float(box[0, 0])
+                    detection.bbox.center.position.y = float(box[0, 1])
+                    detection.bbox.size_x = float(box[0, 2])
+                    detection.bbox.size_y = float(box[0, 3]) 
+                    hypothesis = ObjectHypothesisWithPose()
+                    if b.is_track:     
+                        hypothesis.hypothesis.class_id = str(b.id.cpu().numpy()[0])
+                    hypothesis.hypothesis.score = float(delay)
+                    detection.results.append(hypothesis)
+                    detections_msg.detections.append(detection)
+                self._pub.publish(detections_msg)
+                end=time.time()
+                print("final elaboration", end-t)
+                print("complete elaboration", end-start)
+            pass
+        self._pub_image.publish(self.bridge.cv2_to_imgmsg(r.plot(), 'bgr8'))
 
 
                     
